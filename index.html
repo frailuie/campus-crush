@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gruppo&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&family=Murecho:wght@100;200;300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+    <title>campus crush | frailuie</title>
+    <link rel="icon" type="image/x-icon" href="icon-images/heart-favicon.png">
+</head>
+<body>
+    <div id="game">
+        <div class="game-name">Campus Crush</div>
+        <div id="stats">
+            <span class="stat"><img src="/icon-images/heart.png">&nbsp;&nbsp;<span id="favorText">0</span></span><br>
+            <span class="stat"><img src="/icon-images/sleeping-face.png" id="sleep-icon">
+                <div class="energy-bar">
+                    <div class="energy-fill"></div>
+            </div>
+            </span>
+            <br>
+            <span class="stat"><img src="icon-images/money.png" alt="dollar sign symbol"> <span id="dollarText">100</span></span>
+        </div>
+
+        <div id="romanceStats">
+            <span class="stat"><strong>Name</strong>: <span id="dateName">Noname</span></span><br>
+            <span class="stat"><img src="/icon-images/heart.png"> <span id="dateCurrentFavor">Unknown</span></span><br>
+            <span class="stat"><img src="/icon-images/mood.png" alt="mood icon" id="mood-icon"> <span id="dateMood">Peaceful</span></span>
+        </div>
+
+        <div id="controls">
+            <button id="goToCafe">Go to Cafe</button>
+            <button id="goToLounge">Head to Student Lounge</button>
+            <button id="goToStore">Go to Campus Store</button>
+            <button id="goToUnion">Go to Student Union Building</button>
+            <button id="goToDorm">Go back to Dorm</button>
+            <button id="goToDate">Head Downtown</button>
+        </div>
+
+        <div id="text">
+            Welcome to Campus Crush! Right now you're reading in the Quad, but would you like to go somewhere else? Use the buttons to the left to choose a destination.
+        </div>
+
+        <div class="inventory-box">
+            <ul id="inventoryList">
+                <li><img src="/icon-images/default.png"></li>
+                <li><img src="/icon-images/default.png"></li>
+                <li><img src="/icon-images/default.png"></li>
+                <li><img src="/icon-images/default.png"></li>
+                <li><img src="/icon-images/default.png"></li>
+              </ul>
+        </div>
+        
+    </div>
+
+    <!-- message box -->
+    <div class="text-from-app">
+        <div class="text-format">
+          <div class="text-icons">
+                  <img src="" alt="icon from texter" class="profile-icon">
+                  <img src="https://res.cloudinary.com/diod8pjhj/image/upload/v1670798811/apple_message_icon_a7gshk.svg" class="notif-icon" alt="message icon">
+            <h3 class="message-name"></h3>
+          </div>
+          <div class="message-time"></div>
+        </div>
+        <p class="message-text"></p>
+      </div>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>

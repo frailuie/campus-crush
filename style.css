@@ -1,0 +1,291 @@
+* {
+    margin: 0;
+}
+
+body {
+  background-color: #393233;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+/* game title */
+.game-name {
+  font-size: 80px;
+  font-family: 'Sacramento', sans-serif;
+  letter-spacing: .15ch;
+  color: #f2fbf4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -30px;
+  margin-left: 190px;
+  margin-bottom: -45px;
+
+}
+
+/* game container */
+#game {
+  margin: 40px auto 50px auto;
+  display: grid;
+  background: linear-gradient(570deg, #fca8bd, #f8e3b9);
+  height: 585px;
+  width: 1199px;
+  padding: 20px;
+  border: 2px solid transparent;
+  border-radius: 5px;
+
+}
+
+/* player info box */
+#stats {
+  display: inline;
+  align-items: center;
+  justify-content: center;  
+  background-color: #393233;
+  color: #f2fbf4;
+  font-size: 17.2px;
+  border-radius: 23px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  line-height: 1.49;
+  width: 180px;
+  height: 73px;
+  padding: 17px;
+  border: 1px solid #f2fbf4;
+  margin-left: 15px;
+  margin-top: -65px;
+}
+
+#stats img, #romanceStats img {
+  height: 19px;
+  width: 19px;
+  margin-bottom: -3px;
+
+}
+
+/* energy bar */
+.energy-bar {
+  width: 140px;
+  height: 15px;
+  margin-top: -19px;
+  margin-left: 25px;
+  margin-bottom: -18px;
+  background-color: #faf7f7e8;
+}
+
+.energy-fill {
+  height: 100%;
+  background-color: #74f693;
+  width: 60%;
+}
+
+/* npc stats */
+#romanceStats {
+  display: none;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  line-height: 1.35;
+  background-color: #393233;
+  color: #f2fbf4;
+  height: 70px;
+  width: 180px;
+  padding: 10px;
+  margin-left: 19px;
+  margin-top: 2px;
+  border-radius: 5px;
+  border: 1px solid #f4caca;
+}
+
+/* text box for game */
+#text {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  background-color: #393233;
+  color: #f2fbf4;
+  font-family: 'Murecho', sans-serif;
+  font-size: 1.3rem;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  width: 600px;
+  border-radius: 7px;
+  box-shadow: 0 0 50px #f7ebed;
+  margin-top: -434px;
+  margin-left: 350px;
+  padding: 50px;
+  z-index: 1;
+}
+
+/* buttons  */
+#controls {
+    display: grid;
+    flex-direction: column;
+    background-color: #5F4348;
+    color: white;
+    border: 1px solid #393E46;
+    border-radius: 5px;
+    height: 320px;
+    width: 245px;
+    padding: 10px;
+    margin: 15px 0px 3px 8px;
+}
+
+button {
+  background-color: #FFF4F7;
+  color: #393E46;
+  font-family: 'Murecho', sans-serif;
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 3.4px;
+  margin-bottom: 4px;
+}
+
+button:hover {
+  background-color: #393E46;
+  color: #FF6D9B;
+  transition: 0.35s ease-in;
+}
+
+/* text message notification */
+.text-from-app {
+    display: none;
+    position: relative;
+    margin-left: 1070px;
+    height: auto;
+    width: 290px;
+    padding: 20px;
+    color: #444;
+    background-color: rgba(247, 247, 247, 0.756);
+    font-family: 'Helvetica', sans-serif;
+    border-radius: 45px;
+    bottom: -100%;
+    left: 10%;
+    transform: translateX(-50%);
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+    animation: slideUp 1s ease-out forwards; 
+    z-index: 2;
+  }
+
+
+  @keyframes slideUp {
+    0% {
+      opacity: 0;
+      transform: translateX(-10%) translateY(100%);
+    }
+    
+    100% {
+      opacity: 1;
+      transform: translateX(-56%) translateY(-2%);
+    }
+  }
+
+.inventory-box{
+  position: absolute;
+  margin-top: 480px;
+  margin-left: 475px;
+}
+  /* inventory bar */
+#inventoryList {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  list-style: none;
+  flex-direction: row;
+  background-color: #fff4f761;
+  height: 50px;
+  min-width: 395px;
+  max-width: auto;
+  padding: 10px;
+  border: 1px solid #393e461c;
+}
+
+#inventoryList img {
+  margin: -8px 5px 0px 5px;
+  padding: 6px;
+  height: 52px;
+  width: 52px;
+}
+
+.text-format {
+    display: inline-block;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    color: rgba(30, 30, 30, 0.6);
+    font-weight: 500;
+  }
+
+
+  .message-name {
+    margin-top: -10px;
+  }
+
+  .text-icons {
+    display: flex;
+    align-items: center;
+  }
+
+  .profile-icon {
+    width: 75px;
+    height: 75px;
+    margin-right: 3px;
+    border-radius: 50px;
+  }
+
+  .notif-icon {
+    width: 24px;
+    height: 24px;
+    margin-left: -20px;
+    margin-bottom: -40px;
+  }
+
+  .message-time {
+    margin-top: -25px;
+    margin-left: 90px;
+  }
+  
+  .message-text {
+    margin-top: 9px;
+    margin-left: 40px;
+    padding: 3px;
+
+  }
+
+
+  h3, p {
+    color: #0b1a28;
+    text-align: left;
+  }
+
+  h3 {
+    font-size: 24px;
+    margin-left: 8px;
+    margin-bottom: 2px;
+    font-weight: 600;
+  }
+  
+  p {
+    font-size: 15px;
+    font-weight: 400;
+    margin-top: 16px;
+  }
+
+  .heart-img {
+    transition: 2.5s ease-in-out;
+    bottom: -50%;
+  }
+
+  .up {
+    bottom: 100%;
+  }
+
+  .negheart-img {
+    transition: 2.5s ease-in-out;
+    top: -50%;
+  }
+
+  .down {
+    top: 100%;
+  }
+
