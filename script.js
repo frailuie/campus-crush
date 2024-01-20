@@ -11,7 +11,7 @@ let inventory = [];
 //text messages - each person has 26 messages
 const Jayden = {
     name: "Jayden",
-    image: "/icon-images/notebook.jpg",
+    image: "icon-images/notebook.jpg",
     message: [
     "Oh yea.. Idk if I mentioned it but I'm vegan so.. I'm not sure about that place. Anywhere else you wanna try?", 
     "Hey, did you see my Fundamentals of Business book? I think I left it in your room.. 😥", 
@@ -47,7 +47,7 @@ const Jayden = {
 
 const Alex = {
     name: "Alex",
-    image: "/icon-images/corgi.jpg",
+    image: "icon-images/corgi.jpg",
     message: [
     "not so good!! 😭 my philo book is missing! maybe molly ate it?", 
     "lol ok, what's your favorite color? 🥲 or wait, how about this, what's your favorite animal!? 🥰", 
@@ -82,7 +82,7 @@ const Alex = {
 
 const River = {
     name: "River",
-    image: "/icon-images/night.jpg",
+    image: "icon-images/night.jpg",
     message: [
     "Just watching Youtube. You?", 
     "Yes, I've been stuck in the lab for hours. 😒", 
@@ -117,7 +117,7 @@ const River = {
 
 const Quinn = {
     name: "Quinn",
-    image: "/icon-images/skateboard.jpg",
+    image: "icon-images/skateboard.jpg",
     message: [
     "sry not now i've got a pick-up game today! but you can message me after 🧡", 
     "i'm out with river rn, why? wassup? 😎", 
@@ -152,7 +152,7 @@ const Quinn = {
 
 const Kai = {
     name: "Kai",
-    image: "/icon-images/sunset.jpg",
+    image: "icon-images/sunset.jpg",
     message: [
     "I don't think so.",
     "Is that a yes?",
@@ -933,7 +933,7 @@ function buyGiftCard() {
         shorthand: "a gift card",
         quantity: 1,
         available: true,
-        image: "/icon-images/gift card.png",
+        image: "icon-images/gift card.png",
         
       });
   
@@ -966,7 +966,7 @@ function buyRoses(){
         shorthand: "a bouquet of roses",
         quantity: 1,
         available: true,
-        image: "/icon-images/rose bouquet.png"
+        image: "icon-images/rose bouquet.png"
       });
   
       const inventoryBox = document.getElementById("inventoryList");
@@ -997,7 +997,7 @@ function buyChocolate(){
         shorthand: "box of chocolates", 
         quantity: 1, 
         available: true,
-        image: "/icon-images/chocolates.png" });
+        image: "icon-images/chocolates.png" });
     
     const inventoryBox = document.getElementById("inventoryList");
       const inventoryList = inventory.map(item => item.shorthand).join(", ");
@@ -1049,7 +1049,7 @@ function buyCBTix(){
         shorthand: "2 tickets to a basketball game", 
         quantity: 1, 
         available: true,
-        image: "/icon-images/tickets.png"});
+        image: "icon-images/tickets.png"});
     
         const inventoryBox = document.getElementById("inventoryList");
         const inventoryList = inventory.map(item => item.shorthand).join(", ");
@@ -1316,7 +1316,7 @@ function rentTextbook(){
         shorthand: "a used textbook", 
         quantity: 1, 
         available: true,
-        image: "/icon-images/textbook.png" });
+        image: "icon-images/textbook.png" });
     
         const inventoryBox = document.getElementById("inventoryList");
         const inventoryList = inventory.map(item => item.shorthand).join(", ");
@@ -1347,11 +1347,11 @@ function rentTextbook(){
 function flirtJayden(){
     flirting = 0;
 
-    const datesHeartsText = document.querySelector("#dateCurrentFavor");
-    datesHeartsText.innerHTML = dates[flirting].favorability;
-
     dateName.innerText = dates[flirting].name;
     let datesFavor = dates[flirting].favorability;
+
+    const datesHeartsText = document.querySelector("#dateCurrentFavor");
+    datesHeartsText.innerHTML = datesFavor;
 
     //barrier for the player
     if(favorability <= 15){
@@ -1369,11 +1369,11 @@ function flirtJayden(){
 function flirtAlex(){
     flirting = 1;
 
-    const datesHeartsText = document.querySelector("#dateCurrentFavor");
-    datesHeartsText.innerHTML = dates[flirting].favorability;
-
     dateName.innerText = dates[flirting].name;
     let datesFavor = dates[flirting].favorability;
+
+    const datesHeartsText = document.querySelector("#dateCurrentFavor");
+    datesHeartsText.innerHTML = datesFavor;
     
     //barrier for the player
     if(favorability <= 20){
@@ -1390,11 +1390,11 @@ function flirtAlex(){
 function flirtRiver(){
     flirting = 2;
 
-    const datesHeartsText = document.querySelector("#dateCurrentFavor");
-    datesHeartsText.innerHTML = dates[flirting].favorability;
-
     dateName.innerText = dates[flirting].name;
     let datesFavor = dates[flirting].favorability;
+
+    const datesHeartsText = document.querySelector("#dateCurrentFavor");
+    datesHeartsText.innerHTML = datesFavor;
     
     //barrier for the player
     if(favorability <= 30){
@@ -1413,17 +1413,16 @@ function flirtRiver(){
 function flirtQuinn(){
     flirting = 3;
 
-    const datesHeartsText = document.querySelector("#dateCurrentFavor");
-    datesHeartsText.innerHTML = dates[flirting].favorability;
-
     dateName.innerText = dates[flirting].name;
     let datesFavor = dates[flirting].favorability;
+
+    const datesHeartsText = document.querySelector("#dateCurrentFavor");
+    datesHeartsText.innerHTML = datesFavor;
     
     //barrier for the player
     if(favorability <= 45){
         text.innerText = dates[3].name + ": 'can't sry, i've got a thing later'\n\n";
         text.innerText += dates[3].name + " requires 45+ hearts to accept your invitation."
-
     }
 
     else{goFlirt();
@@ -1436,11 +1435,11 @@ function flirtQuinn(){
 function flirtKai(){
     flirting = 4;
 
-    const datesHeartsText = document.querySelector("#dateCurrentFavor");
-    datesHeartsText.innerHTML = dates[flirting].favorability;
-
     dateName.innerText = dates[flirting].name;
     let datesFavor = dates[flirting].favorability;
+
+    const datesHeartsText = document.querySelector("#dateCurrentFavor");
+    datesHeartsText.innerHTML = datesFavor;
     
     //barrier for the player
     if(favorability <= 60){
@@ -1592,7 +1591,7 @@ function gift(){
     //removing the icon's image from the dom after the gift is gifted
     const inventoryList = document.getElementById("inventoryList");
     const itemElem = inventoryList.querySelector(`li img[src="${selectedItem.image}"]`).parentElement;
-    itemElem.innerHTML = `<img src="/icon-images/default.png">`; //changes the icon back to the default
+    itemElem.innerHTML = `<img src="icon-images/default.png">`; //changes the icon back to the default
 
    //give the gift but check if it's available in the inventory first
    if (selectedDate.preferences.hasOwnProperty(selectedItem.name) && selectedItem.available) 
